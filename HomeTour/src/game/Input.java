@@ -69,6 +69,7 @@ public class Input {
 						player.getCurrentRoom().getAppliances();
 						
 				}
+				break;
 			case "pickup":
 			case "use":
 			case "sit":
