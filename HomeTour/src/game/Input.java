@@ -69,14 +69,22 @@ public class Input {
 						player.getCurrentRoom().getAppliances();
 						
 				}
+			case "pickup":
+			case "use":
+			case "sit":
+				System.out.println("Clairvoyance can only get you so far...");
+				//These commands have not been implemented.
 		}
 	}
 	
 	public void printInstructions() {
-		//TODO Finish generating this stub.
 		System.out.println("--- These are instructions. ---");
 		System.out.println("You can 'go' or 'move' in a cardinal direction.");
+		//Incomplete impementation.
 		System.out.println("You can 'inspect' rooms, furniture, and appliances.");
+//		System.out.println("You can try to 'pickup' items."); 
+//		System.out.println("You can try to 'sit' on furniture.");
+//		System.out.println("You can try to 'use' appliances and furniture.");
 		System.out.println("You can try to 'exit'.");
 		System.out.println("---   ---\n");
 	}
