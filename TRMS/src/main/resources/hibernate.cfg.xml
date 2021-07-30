@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		
+		<property name="hibernate.connection.driver_class">
+			org.postgresql.Driver
+		</property>
+		
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+		
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://database-1.cdr6fpewkz8c.us-east-1.rds.amazonaws.com/postgres
+		</property>
+		
+		<property name="hibernate.connection.username">
+			hupp
+		</property>
+		
+		<property name="hibernate.connection.password">
+			password
+		</property>
+		
+		<!-- Optional Properties -->
+		<property name="show_sql">
+			true
+		</property>
+		
+		<property name="hbm2ddl.auto">
+			validate
+			<!-- https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#configurations-hbmddl
+			Chapter 23.14 -->
+		</property>
+		
+		<!-- Class Mappings -->
+		<mapping class="dev.hupp.models.Communication" />
+		<mapping class="dev.hupp.models.Department" />
+		<mapping class="dev.hupp.models.Employee" />
+		<mapping class="dev.hupp.models.Event" />
+		<mapping class="dev.hupp.models.EventType" />
+		<mapping class="dev.hupp.models.GradingFormat" />
+		<mapping class="dev.hupp.models.ReimbursementRequest" />
+		<mapping class="dev.hupp.models.RequestAttachment" />
+
+	</session-factory>
+</hibernate-configuration>
