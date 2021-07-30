@@ -32,7 +32,7 @@ public class BankController {
 		this.cs = cs;
 	}
 
-	public Handler getAccountById = (context) -> {
+	public Handler getAccount = (context) -> {
 		String input1 = context.pathParam("client");
 		String input2 = context.pathParam("id");
 		int client;

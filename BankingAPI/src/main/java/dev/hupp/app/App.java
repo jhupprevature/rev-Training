@@ -46,11 +46,10 @@ public class App {
 		
 		BankController bc = new BankController(as, cs);
 		
-		//TODO Verify all endpoints met.
 		app.get("/clients", bc.getAllClients);
 		app.get("/clients/:id", bc.getClientById);
 		app.get("/clients/:client/accounts/", bc.getAccountsByClient);
-		app.get("/clients/:client/accounts/:id", bc.getAccountById);
+		app.get("/clients/:client/accounts/:id", bc.getAccount);
 		app.get("/accounts", bc.getAllAccounts);
 		
 		app.post("/clients", bc.addClient);
@@ -63,7 +62,6 @@ public class App {
 		app.delete("/clients/:id", bc.deleteClient);
 		app.delete("/clients/:client/accounts/:id", bc.deleteAccount);
 		
-		//TODO Complete this implementation
 		app.patch("/clients/:client/accounts/:origin", bc.transferFunds);
 		app.patch("/clients/:client/accounts/:origin/transfer/:destination", bc.transferFunds);
 		
